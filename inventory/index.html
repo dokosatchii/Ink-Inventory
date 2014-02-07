@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="stylesheet2.css"/>
+<script type="text/javascript" src="jquery-1.9.1.js"></script>
+<script type="text/javascript" src="myscript.js"></script>
+<title>Ink Inventory Redesigned</title>
+</head>
+<body>
+<h1>Toner Checkout</h1>
+<div class="standard">
+	<h2>Ticket & Department</h2>
+	<img class="itpics" src="user.jpg" style="padding:0px 0px 0px 40px;">
+		<form autocomplete="off" id="first">
+			<input type="text" onfocus="if(this.value == 'ticket number...') { this.value = ''; }" id="ticket" name="ticket" value="ticket number...">
+			<select id="department">
+				<option>Department</option>
+				<option>BAS</option>
+				<option>EMS</option>
+				<option>Mail Services</option>
+				<option>Material Services</option>
+				<option>OEM</option>
+				<option>Operations</option>
+				<option>Pro Shop</option>
+				<option>REHS</option>
+				<option>RUPD</option>
+				<option>Security Technologies</options>
+			</select>			
+		</form>
+</div>
+
+<div class="standard">
+	<h2>Ricoh Aficio</h2>
+	<img class="itpics" src="ricoh.jpg">
+		<form autocomplete="off" id="second">
+			<select id="ricohtype">
+				<option value="0">MP171</option>
+				<option value="0">MP2851</option>
+				<option value="0">MP4001</option>
+				<option value="0">MP5001</option>
+				<option value="1">MPC2800</option>
+				<option value="1">MPC3300</option>
+				<option value="1">MPC3501</option>
+				<option value="1">MPC5000</option>
+				<option value="1">ProC550EX</option>
+			</select>
+			<select id="ricohcolor">
+				<option>Black</option>
+			</select>
+			<select id="ricohamount">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+			<input type="button" id="submit" value="check out!" onclick="check();ricohinfo()">
+		</form>
+</div>
+
+<div class="standard">
+	<h2>HP Officejets & Deskjets</h2>
+	<img class="itpics" src="hpd.png">
+		<form autocomplete="off" id="third">
+			<select id="hpdtype">
+				<option value="1">Deskjet D1341</option>
+				<option value="1">Deskjet 895C</option>
+				<option value="1">Deskjet 1000</option>
+				<option value="1">Deskjet 3000</option>
+				<option value="1">Deskjet 5150</option>
+				<option value="1">Deskjet 5550</option>
+				<option value="1">Deskjet 6122</option>
+				<option value="1">Deskjet 6940</option>
+				<option value="1">Fax 1240</option>
+				<option value="2">Business Inkjet 1100</option>
+				<option value="0">Officejet Pro L7780</option>
+				<option value="0">Officejet 6210</option>
+				<option value="1">Officejet 7110</option>
+				<option value="1">Officejet 7310</option>
+			</select>
+			<select id="hpdcolor">
+				<option>Black</option>
+				<option>Tricolor</option>
+			</select>
+			<select id="hpdamount">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		<input type="button" id="submit2" value="check out!" onclick="check();hpdinfo()">
+		</form>
+</div>
+
+<div class="standard">
+	<h2>HP LaserJet</h2>
+	<img class="itpics" src="hp.jpg" style="padding:0px 0px 0px 65px;">
+		<form autocomplete="off" id="fourth">
+			<select id="hptype">
+				<option value="1">LaserJet CP2025x</option>
+				<option value="1">LaserJet CP3525n</option>
+				<option value="1">LaserJet Pro CP1025NW</option>
+				<option value="0">LaserJet Pro 400 M401N</option>
+				<option value="1">LaserJet Pro 400 M451DN</option>
+				<option value="0">LaserJet Pro M1536DNF</option>
+				<option value="0">LaserJet P2055DN</option>
+				<option value="0">LaserJet P1006</option>
+				<option value="0">LaserJet P1102W</option>
+				<option value="0">LaserJet 1012</option>
+				<option value="0">LaserJet 1020</option>
+				<option value="0">LaserJet 1320</option>
+				<option value="1">LaserJet 1600</option>
+				<option value="0">LaserJet 2100M</option>
+				<option value="0">LaserJet 2420</option>
+				<option value="1">LaserJet 2605</option>
+				<option value="0">LaserJet 3200</option>
+			</select>
+			<select id="hpcolor">
+				<option>Black</option>
+				<option>Magenta</option>
+				<option>Yellow</option>
+				<option>Cyan</option>
+			</select>
+			<select id="hpamount">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		<input type="button" id="submit2" value="check out!" onclick="check();hpinfo()">
+		</form>
+</div>
+
+
+<div id="update"></div>
+<div id="update2"></div>
+<br>
+<a href="addtoner.php" id="move">Click here to add toner to inventory</a><br>
+<a href="list.php">Click here to view entire inventory</a>
+</body>
+</html>
